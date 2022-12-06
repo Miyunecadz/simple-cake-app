@@ -4,6 +4,7 @@
 
 .card-img-top {
     height: 200px;
+    object-fit: cover;
 }
 
 nav {
@@ -12,4 +13,28 @@ nav {
     position: sticky !important;
     top: 0;
     z-index: 2;
+}
+
+.floating-icon {
+    bottom: 3%;
+    right: 3%;
+    height: 53px;
+    width: 53px;
+    border-radius: calc(53px/2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.form-check-input {
+    height: 20px;
+    width: 20px;
+}
+
+.modal-form .form-group label {
+    padding-left: 5px;
+    margin-top: 5px;
 }
