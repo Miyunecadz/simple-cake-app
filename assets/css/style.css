@@ -1,0 +1,15 @@
+.cake-logo {
+    height: 50px;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+nav {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky !important;
+    top: 0;
+    z-index: 2;
+}
