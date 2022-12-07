@@ -38,3 +38,7 @@ nav {
     padding-left: 5px;
     margin-top: 5px;
 }
+
+.text-justify {
+    text-align: justify;
+}

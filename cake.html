@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA PLAKOUS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary bg-gradient shadow position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand text-white" href="/dashboard.html">
+                <img src="./assets/images/new-main-logo.png" class="cake-logo" alt="Cake Logo" />
+                <!-- Change the line 20 if you want to change the name of the Banner name -->
+                LA PLAKOUS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="./dashboard.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="./cake.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-card-list" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                <path
+                                    d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                            </svg>
+                            List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                <path fill-rule="evenodd"
+                                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                            </svg>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 py-5">
+        <h6>List of Cakes</h6>
+        <div class="row mt-3 justify-content-center">
+            <div class="col-12 row gap-2">
+                <!-- New York Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/new-york-cheesecake.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">New York Cheesecake</h5>
+                        <p class="card-text">
+                            New York-style cheesecake uses a cream cheese base with sour
+                            cream and a graham cracker crust.
+                            <a href="javascript:void(0)" style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#newYorkModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="newYorkModal" tabindex="-1" aria-labelledby="newYorkModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="newYorkModalLabel">
+                                    New York style Cheesecake
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/new-york-cheesecake.jpg" class="card-img-top" alt="..." />
+                                <p class="card-text mt-2">
+                                    New York-style cheesecake uses a cream cheese base with sour
+                                    cream and a graham cracker crust. It has a rich, dense, and
+                                    creamy consistency and can be topped with your favorite
+                                    garnish.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of New York Cheesecake -->
+
+                <!-- Chocolate Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/chocolate-cheesecake.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Cheesecake</h5>
+                        <p class="card-text">
+                            Chocolate cheesecake is the perfect dessert for chocolate lovers
+                            because it adds melted semisweet chocolate chips right into the
+                            cheesecake filling.
+                            <a href="javascript:void(0)" style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#chocolateModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="chocolateModal" tabindex="-1" aria-labelledby="chocolateModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="chocolateModalLabel">
+                                    Chocolate Cheesecake
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/chocolate-cheesecake.jpg" class="card-img-top" alt="..." />
+                                <p class="card-text mt-2">
+                                    Chocolate cheesecake is the perfect dessert for chocolate
+                                    lovers because it adds melted semisweet chocolate chips
+                                    right into the cheesecake filling. It's rich, creamy, and
+                                    chocolatey, all dolloped on top of a crunchy Orea cookie
+                                    crust
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Chocolate Cheesecake -->
+
+                <!-- White Chocolate Raspberry Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/white-chocolate-raspberry-cheesecake.jpg" class="card-img-top"
+                        alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">White Chocolate Raspberry Cheesecake</h5>
+                        <p class="card-text">
+                            This type of cheesecake offers two flavor customizations.
+                            <a href="javascript:void(0)" style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#whiteChocolateModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="whiteChocolateModal" tabindex="-1"
+                    aria-labelledby="whiteChocolateModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="whiteChocolateModalLabel">
+                                    White Chocolate Raspberry Cheesecakee
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/white-chocolate-raspberry-cheesecake.jpg" class="card-img-top"
+                                    alt="..." />
+                                <p class="card-text mt-2">
+                                    This type of cheesecake offers two flavor customizations.
+                                    White Chocolate chips are melted into the cheesecake
+                                    filling, while raspberries are boiled into a sauce and
+                                    swirled into the top of the cheesecake. It's the perfect
+                                    combination of tart and sweet.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of White Chocolate Raspberry Cheesecake -->
+
+                <!-- Chocolate Peanut Butter Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/chocolate-peanut-butter-cheesecake.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Peanut Butter Cheesecake</h5>
+                        <p class="card-text">
+                            Chocolate Peanut Butter cheesecake mixes peanut butter into the
+                            rich cheesecake filling
+                            <a href="javascript:void(0)" style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#chocolatePeanutModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="chocolatePeanutModal" tabindex="-1"
+                    aria-labelledby="chocolatePeanutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="chocolatePeanutModalLabel">
+                                    Chocolate Peanut Butter Cheesecake
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/chocolate-peanut-butter-cheesecake.jpg" class="card-img-top"
+                                    alt="..." />
+                                <p class="card-text mt-2">
+                                    Chocolate Peanut Butter cheesecake mixes peanut butter into
+                                    the rich cheesecake filling, which is poured atop an Oreo
+                                    cookie crust. Chocolate ganache and chopped peanuts top off
+                                    this decadent dessert that's worthy of an award.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Chocolate Peanut Butter Cheesecake -->
+            </div>
+
+            <div class="col-12 row gap-2">
+                <!-- Philadelphia Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/philadelphia-style-cheesecake.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Philadelphia Style Cheesecake</h5>
+                        <p class="card-text">
+                            Philadelphia Style Cheesecake is believed to be a mythical cake
+                            with a lot more flavor and a super light texture.<a href="javascript:void(0)"
+                                style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#philadelphiaModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="philadelphiaModal" tabindex="-1" aria-labelledby="philadelphiaModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="philadelphiaModalLabel">
+                                    New York style Cheesecake
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/philadelphia-style-cheesecake.jpg" class="card-img-top"
+                                    alt="..." />
+                                <p class="card-text mt-2">
+                                    Philadelphia Style Cheesecake is believed to be a mythical
+                                    cake with a lot more flavor and a super light texture. This
+                                    incredible cheesecake goes as far back as Ancient Greece,
+                                    after which it created quite a wave in medieval England
+                                    followed by Colonial America. Much to anyone’s surprise or
+                                    confusion, this cheesecake doesn’t have anything to do with
+                                    the city, Philadelphia. So, a key ingredient used in this
+                                    delicious cheesecake is, of course, the Philadelphia cream
+                                    cheese in the main filling.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Philadelphia Cheesecake -->
+
+                <!-- Chicago Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/chicago-cheesecake.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Chicago style Cheesecake</h5>
+                        <p class="card-text">
+                            This is a baked cheesecake that is relatively fluffier in its
+                            texture compared to several other types of cheesecakes.
+                            <a href="javascript:void(0)" style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#chicagoModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="chicagoModal" tabindex="-1" aria-labelledby="chicagoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="chicagoModalLabel">
+                                    Chocolate Cheesecake
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/chicago-cheesecake.jpg" class="card-img-top" alt="..." />
+                                <p class="card-text mt-2">
+                                    This is a baked cheesecake that is relatively fluffier in
+                                    its texture compared to several other types of cheesecakes.
+                                    It consists of a super soft, moist, and creamy filling
+                                    texture on the inside and is slightly firm from the outside.
+                                    The crust is most commonly made from crushed shortbread
+                                    which is then mixed with butter, sugar, vanilla extract,
+                                    salt, and all-purpose flour. The filling is usually a
+                                    mixture of cream cheese, whole eggs, egg yolks, sour cream,
+                                    sugar, and vanilla extract.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Chicago Cheesecake -->
+
+                <!-- Key Lime Cheesecake -->
+                <div class="card col-md my-2 px-0 shadow-sm" style="width: 18rem">
+                    <img src="./assets/images/key-lime-cheesecake.jpeg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Key Lime Cheesecake</h5>
+                        <p class="card-text">
+                            Combining the tart and sweet flavor of key lime pie and the
+                            incredible richness of classic cheesecake, a key lime cheesecake
+                            offers the best of both worlds.
+                            <a href="javascript:void(0)" style="text-decoration: none" data-bs-toggle="modal"
+                                data-bs-target="#keyLimeModal">See more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="keyLimeModal" tabindex="-1" aria-labelledby="keyLimeModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="keyLimeModalLabel">
+                                    Key Lime Cheesecakee
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./assets/images/key-lime-cheesecake.jpeg" class="card-img-top" alt="..." />
+                                <p class="card-text mt-2">
+                                    Combining the tart and sweet flavor of key lime pie and the
+                                    incredible richness of classic cheesecake, a key lime
+                                    cheesecake offers the best of both worlds. It’s made by
+                                    mixing in key lime zest right into the cheesecake filling
+                                    and topping with key lime slices and lots of whipped cream.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of White Chocolate Raspberry Cheesecake -->
+
+                <!-- Blank Card -->
+                <div class="col-md my-2 px-0" style="width: 18rem"></div>
+
+                <!-- End of Blank Card -->
+            </div>
+            <!-- floating icon for feedback -->
+            <div class="position-fixed p-2 bg-primary shadow floating-icon text-white" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                    <path
+                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    <path
+                        d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                Give us your feedback
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="modal-form" action="" method="post">
+                                <h4>How satisfied are you? Please rate your experience.</h4>
+                                <div class="form-group d-flex justify-content-center gap-4 my-3">
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">0</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">1</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">2</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">3</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">4</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">5</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">6</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">7</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">8</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <label for="rating" class="d-block">9</label>
+                                    </div>
+                                </div>
+                                <h6>What can we do to improve your experience?</h6>
+                                <textarea name="comment" id="comment" cols="30" rows="5"
+                                    class="form-control"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Submit Feedback
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
