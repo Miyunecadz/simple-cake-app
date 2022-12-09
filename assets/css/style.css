@@ -42,3 +42,9 @@ nav {
 .text-justify {
     text-align: justify;
 }
+
+.spinner-container {
+    display: none;
+    height: 18px;
+    width: 18px;
+}

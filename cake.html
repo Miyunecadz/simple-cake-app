@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/feedback.js" defer></script>
 </head>
 
 <body>
@@ -410,7 +411,7 @@
             </div>
             <!-- floating icon for feedback -->
             <div class="position-fixed p-2 bg-primary shadow floating-icon text-white" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+                data-bs-target="#feedbackModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                     class="bi bi-chat-left-text" viewBox="0 0 16 16">
                     <path
@@ -420,12 +421,12 @@
                 </svg>
             </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            <h1 class="modal-title fs-5" id="feedbackModalLabel">
                                 Give us your feedback
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -435,57 +436,62 @@
                                 <h4>How satisfied are you? Please rate your experience.</h4>
                                 <div class="form-group d-flex justify-content-center gap-4 my-3">
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="0" />
                                         <label for="rating" class="d-block">0</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="1" />
                                         <label for="rating" class="d-block">1</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="2" />
                                         <label for="rating" class="d-block">2</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="3" />
                                         <label for="rating" class="d-block">3</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="4" />
                                         <label for="rating" class="d-block">4</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="5" />
                                         <label for="rating" class="d-block">5</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="6" />
                                         <label for="rating" class="d-block">6</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="7" />
                                         <label for="rating" class="d-block">7</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="8" />
                                         <label for="rating" class="d-block">8</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="radio" class="form-check-input" name="rating" id="rating" />
+                                        <input type="radio" class="form-check-input" name="rating" id="rating" value="9" />
                                         <label for="rating" class="d-block">9</label>
                                     </div>
                                 </div>
                                 <h6>What can we do to improve your experience?</h6>
-                                <textarea name="comment" id="comment" cols="30" rows="5"
-                                    class="form-control"></textarea>
+                                <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"></textarea>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                 Close
                             </button>
-                            <button type="button" class="btn btn-primary">
-                                Submit Feedback
+                            <button type="button" class="btn btn-primary btn__submit" onclick="submitFeedback()">
+                                <div class="spinner-border text-light spinner-container" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+    
+                                <span id="btn_txt">
+                                    Submit Feedback
+                                </span>
                             </button>
                         </div>
                     </div>
